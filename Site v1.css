@@ -7,17 +7,23 @@ header h2 div {
 #Accueil{
     float:right;
     margin: 0px 10px 0px 0px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    text-decoration: underline;
 }
 #Forum {
     float:right;
     margin: 0px 10px 0px 0px;
+    border: 2px solid rgba(255, 255, 255, 0);
 }
 #Contact{
     float:right;
     margin: 0px 10px 0px 0px;
+    border: 2px solid rgba(255, 255, 255, 0);
 }
 #Connexion{
     float:right;
     margin: 0px 10px 0px 0px;
+    border: 2px solid rgb(155, 209, 216);
+    border-radius: 10px;
 }
 h2:hover{color:rgb(29, 104, 216)}
