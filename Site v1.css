@@ -1,8 +1,10 @@
-header h2 { 
+header h2 a { 
     text-align: right;
     font-size: 31px;
     font-family: Georgia;
     float: right;
+    text-decoration: none;
+    color: black;
     
 }
 #Accueil{
@@ -28,7 +30,7 @@ header h2 {
     border-radius: 10px;
     background-color: rgb(155, 209, 216);
 }
-h2:hover{color:rgb(255, 255, 255)}
+a:hover{color:rgb(255, 255, 255)}
 
 #arriere-plan {
     height: 780px;
