@@ -1,8 +1,9 @@
-header h2 div { 
+header h2 { 
     text-align: right;
-    font-size: 25px;
+    font-size: 31px;
     font-family: Georgia;
     float: right;
+    
 }
 #Accueil{
     float:right;
@@ -25,5 +26,15 @@ header h2 div {
     margin: 0px 10px 0px 0px;
     border: 2px solid rgb(155, 209, 216);
     border-radius: 10px;
+    background-color: rgb(155, 209, 216);
 }
-h2:hover{color:rgb(29, 104, 216)}
+h2:hover{color:rgb(255, 255, 255)}
+
+#arriere-plan {
+    height: 780px;
+    background-image: url("http://s1.1zoom.net/big7/959/Passenger_Airplanes_Sky_485490.jpg");
+    background-size: cover;
+    border: 0px;
+    margin:-8px;
+    padding:0px;}
+}
