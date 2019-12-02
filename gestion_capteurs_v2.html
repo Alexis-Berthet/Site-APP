@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="gestion_capteurs_v2.css">
+    <title>Gestion des capteurs</title>
+</head>
+
+<body>
+    <header>  <h2 id="Connexion"> <a href="page_connexion.html">Connexion </a></h2>
+         <h2 id="Contact"> <a href="https://google.com">Contact </a></h2> 
+         <h2 id="Accueil"> <a href="https://google.com">Accueil </a></h2> 
+         <h2 id="Forum"> <a href="https://google.com">Forum </a></h2>
+        <h6 id=arriere-plan>  </h6>
+            <img class="logo1" src="https://zupimages.net/up/19/41/m2h6.png" 
+            alt="Infinite system">
+            <img class="logo2" src="https://zupimages.net/up/19/41/z4s7.png" alt="Hare project">
+
+    </header>
+   
+    <div class="choose_op">
+        <fieldset> <legend> <h3>   Gérer les capteurs </h3> </legend> 
+
+            <p> <label> Sélectionner l'opération à effectuer:  <br/>
+            <select name="operation">
+                <option value="parametres">Modifier les paramètres</option>
+                <option value="new_cap">Ajouter un nouveau capteur</option>
+                <option value="delete">Supprimer un capteur</option>
+            </select>
+        </label> </p> <br/><br/>
+
+            <p> <label> Sélectionner le type du capteur:  <br/>
+            <select name="type_capteur">
+                <option value="temperature">Capteur température</option>
+                <option value="cardiaque">Capteur cardiaque</option>
+                <option value="temps_reaction_vue">Capteur visuel</option>
+                <option value="temps_reaction_son">Capteur audio</option>
+            </select>
+        </label> </p> <br/><br/>
+
+        <input placeholder=" Numéro de référence du capteur" type="text" name="num_ref" id="num_ref" required>
+        <label for="num-ref"> </label> <br/><br/> 
+       
+        <p id="modifier_capt"> <a href="modification_capteurs.html">Sélectionner</a></p>
+       
+        </fieldset> <div/>
+
+     <footer>
+        <br>
+        <cut id="box1">
+            <h5> <img class="logoBAS" src="https://zupimages.net/up/19/41/m2h6.png" 
+                alt="Infinite system"> </h5>
+        <h5> <cut id="localisation">Localisation: </cut><br>
+        10 rue de Vanves <br>
+        92130 <br>
+        Issy-les-Moulineaux
+        </h5>
+        <h5>
+            <cut id="email">Email:</cut> <br>
+            Vejlab@hotmail.com
+        </h5>
+        <h5>
+            <cut id="telephone">Téléphone:</cut><br>
+            06.37.00.13.99
+        </h5>
+        <h5> <img class="logoBAS2" src="https://www.iconsdb.com/icons/preview/white/facebook-3-xxl.png" 
+            alt="facebook"> </h5>
+       </cut>
+      <h5 id="Mentions"> Mentions légales </h5>
+    </footer>
+
+
+
+
+</body>
+</html>

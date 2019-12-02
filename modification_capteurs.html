@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="modification_capteurs.css">
+    <title>Modification des paramètres des capteurs</title>
+</head>
+
+<body>
+    <header>  <h2 id="Connexion"> <a href="page_connexion.html">Connexion </a></h2>
+         <h2 id="Contact"> <a href="https://google.com">Contact </a></h2> 
+         <h2 id="Accueil"> <a href="https://google.com">Accueil </a></h2> 
+         <h2 id="Forum"> <a href="https://google.com">Forum </a></h2>
+        <h6 id=arriere-plan>  </h6>
+            <img class="logo1" src="https://zupimages.net/up/19/41/m2h6.png" 
+            alt="Infinite system">
+            <img class="logo2" src="https://zupimages.net/up/19/41/z4s7.png" alt="Hare project">
+
+    </header>
+
+    <br/>
+    <div class="modifier_parametres">
+        <fieldset> <legend> <h3>   Modification des paramètres d'un capteur thermique: </h3> </legend> 
+        <br/>
+
+        <input placeholder=" Numéro de référence du capteur" type="text" name="num_ref" id="num_ref" required>
+        <label for="num-ref"> </label> <br/><br/> <br/> 
+        <p> <label> Unité de mesure du capteur:  <br/><br/> 
+            <select name="unite">
+                <option value="celsius"> Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+            </select>
+        </label> </p><br/> 
+        <div class="cursor"> <p> Etendue de la mesure:  <br/>
+            <input type="range" max="110" min="0" step="5"> 
+        </div> <br/> <br/>
+
+        <label> Minimum : <input 
+            type="number"
+            name="min"
+            min="0"
+            max="110"
+            step="1">
+        </label>
+
+        <label> Maximum : <input 
+            type="number"
+            name="max"
+            min="0"
+            max="110"
+            step="1">
+        </label>
+
+        <br/><br/><br/> 
+
+        <p> <input type="submit" value="Modifier"></p> <br/>
+        </fieldset> <div/>
+
+
+    <footer>
+        <br>
+        <cut id="box1">
+            <h5> <img class="logoBAS" src="https://zupimages.net/up/19/41/m2h6.png" 
+                alt="Infinite system"> </h5>
+        <h5> <cut id="localisation">Localisation: </cut><br>
+        10 rue de Vanves <br>
+        92130 <br>
+        Issy-les-Moulineaux
+        </h5>
+        <h5>
+            <cut id="email">Email:</cut> <br>
+            Vejlab@hotmail.com
+        </h5>
+        <h5>
+            <cut id="telephone">Téléphone:</cut><br>
+            06.37.00.13.99
+        </h5>
+        <h5> <img class="logoBAS2" src="https://www.iconsdb.com/icons/preview/white/facebook-3-xxl.png" 
+            alt="facebook"> </h5>
+       </cut>
+      <h5 id="Mentions"> Mentions légales </h5>
+    </footer>
+
+
+
+
+</body>
+</html>
