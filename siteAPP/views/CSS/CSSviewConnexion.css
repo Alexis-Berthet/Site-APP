@@ -1,0 +1,78 @@
+body { color:rgb(115,178,255);
+    background-color: rgb(54,147,214);
+    font-family: Georgia;
+}
+.connect  {
+    display: block;
+    justify-content: space-between;
+    text-align: center;
+}
+
+p a {
+    font-size: 14px;
+    padding: 10px 17px 10px;
+    height:60px;
+    background: rgb(255,255,255);
+    width:200px;
+    box-sizing: border-box;
+    color: rgb(115,178,255);
+    font-family: Georgia;
+    font-weight:400;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+input[type="text"], input[type="password"] {
+    font-size: 14px;
+    padding: 20px 10px;
+    height: 50px;
+    border: none;
+    border-bottom: solid 1px rgb(115,178,255);
+    background: rgb(255,255,255);
+    min-width: 280px;
+    box-sizing: border-box;
+    transition: all 0.3s linear;
+    color: rgb(0,0,0);
+    font-family: Georgia;
+    font-weight:400;
+}
+
+input[type="text"], input[type="password"] :focus {
+    border-bottom: solid 2px rgb(0,0,0);
+    outline:0;
+}
+
+input[type="submit"] {
+    font-size: 14px;
+    padding: 0;
+    height: 40px;
+    background: rgb(255,255,255);
+    width: 160px;
+    box-sizing: content-box;
+    color: rgb(115,178,255);
+    font-family: Georgia;
+    font-weight:400;
+    border-radius: 20px
+}
+
+.floating-label {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.floating-label label {
+    position: absolute;
+    top: calc(50% - 7px);
+    opacity: 0.5;
+    transition : all 0.3s ease;
+}
+
+.floating-label input:placeholder-shown {
+    padding: 28px 0px 12px 0px;
+}
+
+.floating-label input:placeholder-shown + label {
+    transform-origin: left bottom;
+    transform: translate(0, 30px) scale(1.5);
+    opacity: 0.8;
+}

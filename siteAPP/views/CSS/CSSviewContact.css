@@ -1,0 +1,57 @@
+
+body{
+    background-color: rgb(54, 147, 214);
+}
+
+#Reseauxsociaux{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: georgia;
+
+}
+
+.infos{
+    display: block;
+    background-color: white;
+    margin:0%;
+    height: 100%;
+    width: 100%;
+    height: 80%;
+}
+
+#Siègesocial{
+    margin: 10%;
+    color: rgb(54, 147, 214);
+    font-size: 20px;
+    text-align: left;
+    font-family: georgia;
+}
+
+#Notretéléphone{
+    margin: 10%;
+    color: rgb(54, 147, 214);
+    font-size: 20px;
+    text-align: right;
+    font-family: georgia;
+}
+
+#Nouscontacter{
+
+    color: rgb(54, 147, 214);
+    font-size: 20px;
+    text-align: center;
+    font-family: georgia;
+}
+
+.bloc{
+    display : block;
+    width: 98%;
+    height: 60%;
+    background-color: rgb(54, 147, 214);
+    margin-right: 8px;
+    margin-left: 8px;
+    border-radius: 20px;
+    text-align: center;
+}
+

@@ -1,0 +1,55 @@
+.logo1{
+    position: absolute;
+    top:100px;
+    height: 200px;
+}
+
+.logo2{
+    position: absolute;
+    height:170px;
+    top:115px;
+    right: 5px;
+}
+header h2 a {
+    text-align: right;
+    font-size: 31px;
+    font-family: Georgia;
+    float: right;
+    text-decoration: none;
+    color: black;
+
+}
+#Accueil{
+    float:right;
+    margin: 0px 10px 0px 0px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    text-decoration: underline;
+}
+#Forum {
+    float:right;
+    margin: 0px 10px 0px 0px;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+#Contact{
+    float:right;
+    margin: 0px 10px 0px 0px;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+#Connexion{
+    float:right;
+    margin: 0px 10px 0px 0px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+a:hover{color:rgb(203, 228, 248)}
+connexion:hover{color: rgb(203, 228, 248)}
+
+#arriere-plan {
+    height: 780px;
+    background-image: url("http://s1.1zoom.net/big7/959/Passenger_Airplanes_Sky_485490.jpg");
+    background-size: cover;
+    border: 0px;
+    margin:-8px;
+    padding:0px;
+}

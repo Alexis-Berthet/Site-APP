@@ -1,0 +1,46 @@
+footer{
+    background-color: rgb(54, 147, 214);
+    margin:-8px;
+    height: 100%;
+}
+
+#box1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+body{
+    background-color: rgb(54, 147, 214);
+}
+#localisation{
+    text-decoration: underline;
+}
+#email{
+    text-decoration: underline;
+}
+
+#telephone{
+    text-decoration: underline;
+}
+
+.logoBAS{
+    height: 100px;
+}
+
+.logoBAS2{
+    height: 90px;
+}
+
+#box1{
+    font-family: georgia;
+    color: white;
+    height: 90px;
+}
+
+#Mentions{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: georgia;
+    text-decoration: none;
+}

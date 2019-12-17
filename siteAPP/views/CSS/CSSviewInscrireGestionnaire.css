@@ -1,0 +1,52 @@
+#project{
+    text-decoration: underline;
+    font-family: Georgia;
+    text-align: center;
+    color: rgb(54, 147, 214);
+    font-size: 30px;
+}
+
+.galerie-photo{
+    width: 60%;
+}
+
+.rechercheBarre {
+    display: block;
+    text-align: center;
+}
+
+input[placeholder] {
+    font-family: Georgia;
+    font-size: 14px;
+    padding: 20px 20px;
+    heigh:50px;
+    border: none;
+    border-bottom: solid 1px rgb(115,178,255);
+    background:rgb(255,255,255);
+    min-width:280px;
+    box-sizing:border-box;
+    transition:all 0.3s linear;
+    color:rgb(0,0,0);
+    font-weight:400;
+    /*color:rgb(115,178,255);*/
+    margin-right: 20px;
+}
+
+button {
+    /*font-family: Georgia;
+    font-size: xx-large;
+    border-color:rgb(115,178,255);
+    color: rgb(115,178,255);
+    background-color: white;
+    border-radius: 20px;*/
+    font-size: 14px;
+    padding: 0;
+    height: 40px;
+    background: rgb(255,255,255);
+    width: 160px;
+    box-sizing: border-box;
+    color: rgb(115,178,255);
+    font-family: Georgia;
+    font-weight:400;
+    border-radius: 20px
+}

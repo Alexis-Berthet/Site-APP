@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(54,147,214) ;
+}
+h1{
+    text-align: center;
+    font-family: sylfaen;
+}
+
+.bloc-texte {
+    display: block;
+    width: 98%;
+    height: 60%;
+    background-color: white;
+    margin-right: 8px;
+    margin-left: 8px;
+    border-radius: 20px;
+}
+
+div {
+    font-family: georgia;
+}
