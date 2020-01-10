@@ -20,6 +20,12 @@ body{
     height: 80%;
 }
 
+.logo{
+    height: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
 #Siègesocial{
     margin: 10%;
     color: rgb(54, 147, 214);
