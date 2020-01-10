@@ -27,7 +27,7 @@
             06.37.00.13.99
         </h5>
         <a href="https://www.facebook.com/InfiniteMeasuresFr">
-            <h5> <img class="logoBAS2" src="https://www.iconsdb.com/icons/preview/white/facebook-3-xxl.png"
+            <h5> <img class="logoBAS2" src="https://zupimages.net/up/19/48/ngb4.png"
                       alt="facebook"> </h5>
         </a>
     </cut>
