@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="views/CSS/CSSfooter.css">
-    <title>Page d'accueuil site v1</title>
+    <title>Page d'accueil site v1</title>
 </head>
 
 <body>
