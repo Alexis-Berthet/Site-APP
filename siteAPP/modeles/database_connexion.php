@@ -3,7 +3,7 @@ function dbConnect()
 {
     try
     {
-        $db = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', '');
+        $db = new PDO('mysql:host=localhost;dbname=mydb;charset=utf8', 'root', '');
         return $db;
     }
 
