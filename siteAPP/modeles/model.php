@@ -30,7 +30,7 @@ function getRole($identifiant)
 
 function getEmail($mail) {
     $db =dbConnect();
-    $req = $db->prepare("SELECT mail FROM personne WHERE adresseMail=:adresseMail");
+    $req = $db->prepare("SELECT adresseMail FROM personne WHERE adresseMail=:adresseMail");
     $req->bindValue(':adresseMail',$mail);
     return $req->fetch();
 }
