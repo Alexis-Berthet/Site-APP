@@ -12,6 +12,9 @@ if (isset($_GET["action"])) {
         case "see_connexion":
             seeConnexion();
             break;
+        case "see_mot_de_passe_oublie":
+            seeMotDePasseOublie();
+            break;
         case "see_contact":
             seeContact();
             break;
