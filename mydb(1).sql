@@ -28,7 +28,6 @@ SET time_zone = "+00:00";
 -- Structure de la table `adminforum`
 --
 
-DROP TABLE IF EXISTS `adminforum`;
 CREATE TABLE IF NOT EXISTS `adminforum` (
   `idadminForum` int(11) NOT NULL AUTO_INCREMENT,
   `adresseMail` varchar(45) COLLATE utf8_bin NOT NULL,
@@ -42,7 +41,6 @@ CREATE TABLE IF NOT EXISTS `adminforum` (
 -- Structure de la table `appareil`
 --
 
-DROP TABLE IF EXISTS `appareil`;
 CREATE TABLE IF NOT EXISTS `appareil` (
   `idAppareil` int(11) NOT NULL AUTO_INCREMENT,
   `NumCarte` int(11) DEFAULT NULL,
@@ -57,7 +55,6 @@ CREATE TABLE IF NOT EXISTS `appareil` (
 -- Structure de la table `capteur`
 --
 
-DROP TABLE IF EXISTS `capteur`;
 CREATE TABLE IF NOT EXISTS `capteur` (
   `n°capteur` int(11) NOT NULL AUTO_INCREMENT,
   `seuilMin` int(11) NOT NULL,
@@ -75,7 +72,6 @@ CREATE TABLE IF NOT EXISTS `capteur` (
 -- Structure de la table `commentaires`
 --
 
-DROP TABLE IF EXISTS `commentaires`;
 CREATE TABLE IF NOT EXISTS `commentaires` (
   `idCommentaires` int(11) NOT NULL AUTO_INCREMENT,
   `contenuCommentaire` multilinestring NOT NULL,
@@ -89,8 +85,6 @@ CREATE TABLE IF NOT EXISTS `commentaires` (
 --
 -- Structure de la table `entreprise`
 --
-
-DROP TABLE IF EXISTS `entreprise`;
 CREATE TABLE IF NOT EXISTS `entreprise` (
   `idEntreprise` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(45) COLLATE utf8_bin NOT NULL,
@@ -112,7 +106,6 @@ INSERT INTO `entreprise` (`idEntreprise`, `nom`, `adresse`, `dateInscription`) V
 -- Structure de la table `mesures`
 --
 
-DROP TABLE IF EXISTS `mesures`;
 CREATE TABLE IF NOT EXISTS `mesures` (
   `Valeurs` int(11) NOT NULL,
   `Temps` datetime NOT NULL,
@@ -128,7 +121,6 @@ CREATE TABLE IF NOT EXISTS `mesures` (
 -- Structure de la table `pageweb`
 --
 
-DROP TABLE IF EXISTS `pageweb`;
 CREATE TABLE IF NOT EXISTS `pageweb` (
   `numéroPageWeb` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`numéroPageWeb`)
@@ -139,8 +131,6 @@ CREATE TABLE IF NOT EXISTS `pageweb` (
 --
 -- Structure de la table `paragraphemodifiable`
 --
-
-DROP TABLE IF EXISTS `paragraphemodifiable`;
 CREATE TABLE IF NOT EXISTS `paragraphemodifiable` (
   `idparagrapheModifiable` int(11) NOT NULL AUTO_INCREMENT,
   `contenu` multilinestring NOT NULL,
@@ -155,7 +145,6 @@ CREATE TABLE IF NOT EXISTS `paragraphemodifiable` (
 -- Structure de la table `permisconduire`
 --
 
-DROP TABLE IF EXISTS `permisconduire`;
 CREATE TABLE IF NOT EXISTS `permisconduire` (
   `idNationalPermisConduire` int(11) NOT NULL,
   `typePermis` varchar(45) COLLATE utf8_bin NOT NULL,
@@ -170,7 +159,6 @@ CREATE TABLE IF NOT EXISTS `permisconduire` (
 -- Structure de la table `personne`
 --
 
-DROP TABLE IF EXISTS `personne`;
 CREATE TABLE IF NOT EXISTS `personne` (
   `nom` varchar(45) COLLATE utf8_bin NOT NULL,
   `prenom` varchar(45) COLLATE utf8_bin NOT NULL,
@@ -192,7 +180,6 @@ CREATE TABLE IF NOT EXISTS `personne` (
 -- Structure de la table `test`
 --
 
-DROP TABLE IF EXISTS `test`;
 CREATE TABLE IF NOT EXISTS `test` (
   `date` date NOT NULL,
   `n°test` int(11) NOT NULL AUTO_INCREMENT,
@@ -207,7 +194,6 @@ CREATE TABLE IF NOT EXISTS `test` (
 -- Structure de la table `topic`
 --
 
-DROP TABLE IF EXISTS `topic`;
 CREATE TABLE IF NOT EXISTS `topic` (
   `idTopic` int(11) NOT NULL AUTO_INCREMENT,
   `contenu topic` multilinestring NOT NULL,
@@ -220,7 +206,6 @@ CREATE TABLE IF NOT EXISTS `topic` (
 -- Structure de la table `typepermisconduire`
 --
 
-DROP TABLE IF EXISTS `typepermisconduire`;
 CREATE TABLE IF NOT EXISTS `typepermisconduire` (
   `typ` int(11) NOT NULL,
   PRIMARY KEY (`typ`)
@@ -232,7 +217,6 @@ CREATE TABLE IF NOT EXISTS `typepermisconduire` (
 -- Structure de la table `typescapteurs`
 --
 
-DROP TABLE IF EXISTS `typescapteurs`;
 CREATE TABLE IF NOT EXISTS `typescapteurs` (
   `idtypesCapteurs` int(11) NOT NULL AUTO_INCREMENT,
   `typeCapteur` varchar(45) COLLATE utf8_bin NOT NULL,
