@@ -2,10 +2,10 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 14 jan. 2020 à 10:37
--- Version du serveur :  5.7.26
--- Version de PHP :  7.2.18
+-- Host: 127.0.0.1:3306
+-- Generation Time: Jan 16, 2020 at 09:38 AM
+-- Server version: 5.7.26
+-- PHP Version: 7.2.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `mydb`
+-- Database: `mydb`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `adminforum`
+-- Table structure for table `adminforum`
 --
 
 DROP TABLE IF EXISTS `adminforum`;
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `adminforum` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `appareil`
+-- Table structure for table `appareil`
 --
 
 DROP TABLE IF EXISTS `appareil`;
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `appareil` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `capteur`
+-- Table structure for table `capteur`
 --
 
 DROP TABLE IF EXISTS `capteur`;
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `capteur` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaires`
+-- Table structure for table `commentaires`
 --
 
 DROP TABLE IF EXISTS `commentaires`;
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `commentaires` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `entreprise`
+-- Table structure for table `entreprise`
 --
 
 DROP TABLE IF EXISTS `entreprise`;
@@ -97,10 +97,10 @@ CREATE TABLE IF NOT EXISTS `entreprise` (
   `adresse` varchar(45) COLLATE utf8_bin NOT NULL,
   `dateInscription` varchar(45) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`idEntreprise`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Déchargement des données de la table `entreprise`
+-- Dumping data for table `entreprise`
 --
 
 INSERT INTO `entreprise` (`idEntreprise`, `nom`, `adresse`, `dateInscription`) VALUES
@@ -109,7 +109,7 @@ INSERT INTO `entreprise` (`idEntreprise`, `nom`, `adresse`, `dateInscription`) V
 -- --------------------------------------------------------
 
 --
--- Structure de la table `mesures`
+-- Table structure for table `mesures`
 --
 
 DROP TABLE IF EXISTS `mesures`;
@@ -125,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `mesures` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `pageweb`
+-- Table structure for table `pageweb`
 --
 
 DROP TABLE IF EXISTS `pageweb`;
@@ -137,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `pageweb` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `paragraphemodifiable`
+-- Table structure for table `paragraphemodifiable`
 --
 
 DROP TABLE IF EXISTS `paragraphemodifiable`;
@@ -152,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `paragraphemodifiable` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `permisconduire`
+-- Table structure for table `permisconduire`
 --
 
 DROP TABLE IF EXISTS `permisconduire`;
@@ -167,29 +167,37 @@ CREATE TABLE IF NOT EXISTS `permisconduire` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `personne`
+-- Table structure for table `personne`
 --
 
 DROP TABLE IF EXISTS `personne`;
 CREATE TABLE IF NOT EXISTS `personne` (
-  `nom` varchar(45) COLLATE utf8_bin NOT NULL,
-  `prenom` varchar(45) COLLATE utf8_bin NOT NULL,
-  `adresse mail` varchar(45) COLLATE utf8_bin NOT NULL,
+  `nom` varchar(45) COLLATE utf8_bin DEFAULT NULL,
+  `prenom` varchar(45) COLLATE utf8_bin DEFAULT NULL,
+  `adresseMail` varchar(45) COLLATE utf8_bin DEFAULT NULL,
   `N°Inscription` int(11) NOT NULL AUTO_INCREMENT,
-  `Mot de passe` varchar(45) COLLATE utf8_bin NOT NULL,
-  `Poid` int(11) NOT NULL,
-  `Taille` int(11) NOT NULL,
-  `âge` int(11) NOT NULL,
-  `Entreprise_idEntreprise` int(11) NOT NULL,
+  `motDePasse` varchar(45) COLLATE utf8_bin DEFAULT NULL,
+  `Poid` int(11) DEFAULT NULL,
+  `Taille` int(11) DEFAULT NULL,
+  `âge` int(11) DEFAULT NULL,
+  `Entreprise_idEntreprise` int(11) DEFAULT NULL,
   `role` varchar(45) COLLATE utf8_bin DEFAULT 'invite',
   PRIMARY KEY (`N°Inscription`),
   KEY `fk_Personne_Entreprise1` (`Entreprise_idEntreprise`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `personne`
+--
+
+INSERT INTO `personne` (`nom`, `prenom`, `adresseMail`, `N°Inscription`, `motDePasse`, `Poid`, `Taille`, `âge`, `Entreprise_idEntreprise`, `role`) VALUES
+('berthet', 'alexis', 'alexis.berthet@isep.fr', 1, 'vejlab98', NULL, NULL, NULL, NULL, 'admin'),
+('jollet', 'valentin', 'valentin.jollet@isep.fr', 2, 'vejlab98', NULL, NULL, NULL, 1, 'user');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `test`
+-- Table structure for table `test`
 --
 
 DROP TABLE IF EXISTS `test`;
@@ -204,7 +212,7 @@ CREATE TABLE IF NOT EXISTS `test` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `topic`
+-- Table structure for table `topic`
 --
 
 DROP TABLE IF EXISTS `topic`;
@@ -217,7 +225,7 @@ CREATE TABLE IF NOT EXISTS `topic` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `typepermisconduire`
+-- Table structure for table `typepermisconduire`
 --
 
 DROP TABLE IF EXISTS `typepermisconduire`;
@@ -229,7 +237,7 @@ CREATE TABLE IF NOT EXISTS `typepermisconduire` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `typescapteurs`
+-- Table structure for table `typescapteurs`
 --
 
 DROP TABLE IF EXISTS `typescapteurs`;
@@ -242,59 +250,59 @@ CREATE TABLE IF NOT EXISTS `typescapteurs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Contraintes pour les tables déchargées
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `appareil`
+-- Constraints for table `appareil`
 --
 ALTER TABLE `appareil`
   ADD CONSTRAINT `fk_Appareil_test1` FOREIGN KEY (`test_n°test`) REFERENCES `test` (`n°test`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Contraintes pour la table `capteur`
+-- Constraints for table `capteur`
 --
 ALTER TABLE `capteur`
   ADD CONSTRAINT `fk_Capteur_Appareil1` FOREIGN KEY (`Appareil_idAppareil`) REFERENCES `appareil` (`idAppareil`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Contraintes pour la table `commentaires`
+-- Constraints for table `commentaires`
 --
 ALTER TABLE `commentaires`
   ADD CONSTRAINT `fk_Commentaires_topic1` FOREIGN KEY (`topic_idTopic`) REFERENCES `topic` (`idTopic`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Contraintes pour la table `mesures`
+-- Constraints for table `mesures`
 --
 ALTER TABLE `mesures`
   ADD CONSTRAINT `fk_Mesures_Capteur1` FOREIGN KEY (`Capteur_n°capteur`) REFERENCES `capteur` (`n°capteur`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Contraintes pour la table `paragraphemodifiable`
+-- Constraints for table `paragraphemodifiable`
 --
 ALTER TABLE `paragraphemodifiable`
   ADD CONSTRAINT `fk_paragrapheModifiable_pageWeb1` FOREIGN KEY (`pageWeb_numéroPageWeb`) REFERENCES `pageweb` (`numéroPageWeb`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Contraintes pour la table `permisconduire`
+-- Constraints for table `permisconduire`
 --
 ALTER TABLE `permisconduire`
   ADD CONSTRAINT `fk_permisConduire_Personne1` FOREIGN KEY (`Personne_N°Inscription`) REFERENCES `personne` (`N°Inscription`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Contraintes pour la table `personne`
+-- Constraints for table `personne`
 --
 ALTER TABLE `personne`
   ADD CONSTRAINT `fk_Personne_Entreprise1` FOREIGN KEY (`Entreprise_idEntreprise`) REFERENCES `entreprise` (`idEntreprise`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Contraintes pour la table `test`
+-- Constraints for table `test`
 --
 ALTER TABLE `test`
   ADD CONSTRAINT `fk_test_Personne` FOREIGN KEY (`Personne_N°Inscription`) REFERENCES `personne` (`N°Inscription`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Contraintes pour la table `typescapteurs`
+-- Constraints for table `typescapteurs`
 --
 ALTER TABLE `typescapteurs`
   ADD CONSTRAINT `fk_typesCapteurs_Capteur1` FOREIGN KEY (`Capteur_n°capteur`) REFERENCES `capteur` (`n°capteur`) ON DELETE NO ACTION ON UPDATE NO ACTION;
