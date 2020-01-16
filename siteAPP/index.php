@@ -39,6 +39,9 @@ if (isset($_GET["action"])) {
         case "see_supprimer_utilisateur" :
             see_supprimer_utilisateur();
             break;
+        case "see_user_data":
+            see_user_data();
+            break;
 
         default:
             echo "404 Not found";

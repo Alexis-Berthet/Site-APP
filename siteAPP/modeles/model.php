@@ -3,7 +3,8 @@
 function checkIn($identifiant, $mot_de_passe)
 {
     $db = dbConnect();
-    $req = $db->prepare("SELECT adresse mail FROM personne WHERE adresse mail=:identifiant AND Mot de passe=:mot_de_passe");
+    $mot_de_passe = hash($mot_de_passe);
+    $req = $db->prepare("SELECT adresseMail FROM personne WHERE adresseMail=:identifiant AND motDePasse=:mot_de_passe");
     $req->bindValue(':identifiant', $identifiant);
     $req->bindValue(':mot_de_passe', $mot_de_passe);
     $req->execute();
@@ -13,7 +14,7 @@ function checkIn($identifiant, $mot_de_passe)
 function getID($identifiant)
 {
     $db = dbConnect();
-    $req = $db->prepare("SELECT inscriptionID FROM personne WHERE mail=:identifiant");
+    $req = $db->prepare("SELECT N°Inscription FROM personne WHERE adresseMail=:identifiant");
     $req->bindValue(':identifiant', $identifiant);
     return $req->fetch();
 }
@@ -21,7 +22,7 @@ function getID($identifiant)
 function getRole($identifiant)
 {
     $db = dbConnect();
-    $req = $db->prepare("SELECT role FROM personne WHERE mail=:identifiant");
+    $req = $db->prepare("SELECT role FROM personne WHERE adresseMail=:identifiant");
     $req->bindValue(':identifiant', $identifiant);
     $req->execute();
     return $req->fetch();

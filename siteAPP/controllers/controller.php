@@ -11,7 +11,7 @@ function seeHome()
 
 function seeConnexion()
 {
-    require "views/template/header.php";
+    see_header();
     switch ($_SESSION["role"]) {
         case "gest" :
             require "views/viewAccueilGestionnaire.php";
@@ -20,7 +20,7 @@ function seeConnexion()
             require "views/viewAccueilAdmin.php";
             break;
         case "user" :
-            require "views/viewAccueilUser.php";
+            require "views/viewResultatsUtilisateur.php";
         default :
             require "views/viewConnexion.php";
             break;
@@ -114,4 +114,28 @@ function see_supprimer_utilisateur()
     require "views/template/header.php";
     require "views/viewInscrireGestionnaire.php";
     require "views/template/footer.php";
+}
+
+function see_user_data()
+{
+    see_header();
+    require "views/viewResultatsUtilisateur.php";
+    require "views/template/footer.php";
+}
+
+function see_header()
+{
+    switch ($_SESSION["role"]) {
+        case "admin" :
+            require "views/template/headerAdmin.php";
+            break;
+        case "gest" :
+            require "views/template/headerGest.php";
+            break;
+        case "user":
+            require "views/template/headerUtilisateur.php";
+            break;
+        default :
+            require "views/template/header.php";
+    }
 }
