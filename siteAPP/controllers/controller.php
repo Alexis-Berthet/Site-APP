@@ -28,6 +28,13 @@ function seeConnexion()
     require "views/template/footer.php";
 }
 
+function seeMotDePasseOublie()
+{
+    require "views/template/header.php";
+    require "views/viewMotDePasseOublie.php";
+    require "views/template/footer.php";
+}
+
 function seeContact()
 {
     require "views/template/header.php";
