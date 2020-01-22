@@ -80,7 +80,7 @@ function connexion()
 function see_donnees_utilisateur()
 {
     require "views/template/header.php";
-    require "views/viewInscrireGestionnaire.php";
+    require "views/viewResultatsAdmin.php";
     require "views/template/footer.php";
 
 }

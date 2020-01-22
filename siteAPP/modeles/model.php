@@ -3,7 +3,7 @@
 function checkIn($identifiant, $mot_de_passe)
 {
     $db = dbConnect();
-    $mot_de_passe = hash($mot_de_passe);
+    //$mot_de_passe = password_hash($mot_de_passe,PASSWORD_ARGON2I);
     $req = $db->prepare("SELECT adresseMail FROM personne WHERE adresseMail=:identifiant AND motDePasse=:mot_de_passe");
     $req->bindValue(':identifiant', $identifiant);
     $req->bindValue(':mot_de_passe', $mot_de_passe);
