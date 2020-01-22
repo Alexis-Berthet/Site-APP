@@ -1,50 +1,69 @@
-<?php
-$users = $bdd->query('SELECT * FROM users');
-?>
-<form method="post" action="traitement.php">
-<table border=1 cellpadding=2 cellspacing=5>
-<tr>
-    <th> identifiant </th>
-    
-    <th> nom </th>
-                 
-    <th> prénom </th>
-    <th> mot de passe </th>
-                 
-    <th> Taille </th>
-                 
-    <th> Poids </th>
-                 
-    <th> Age </th>
-                 
-</tr>
-             
-<?php
-             
-while($donnees = $users->fetch()){
-?>
-<tr>
-    <td><?php echo $donnees['identifiant'];?></td>
-    <td><?php echo $donnees['prénom'];?></td>
-        <td><?php echo $donnees['nom'];?></td>
-        <td><?php echo $donnees['mot de passe'];?></td>
-        <td><?php echo $donnees['Taille'];?></td>
-        <td><?php echo $donnees['Poids'];?></td>
-        <td><?php echo $donnees['Age'];?></td>
-    
-    <td><a href="traitement.php?supprimer=<?php echo $donnees['identifiant'];?>">supprimer</a></td>
-</tr>
-<?php
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="supprimerUtilisateur.css">
+        <title>SuppUtil</title>
+    </head>
+    <body>
+        
 
-             
-</table>
-
-if(isset($_GET['supprimer'])){ 
+        <h3>Supprimer un utilisateur :</h3>
+   
+        <br>        
+        <br> 
+        <br> 
+        
+        <?php
+        
+        if (!isset($_POST['numero']))
+        {
+            ?>
+            
+            <form action="SuppUtil.php" method="post">
+            <p>Entrez un numéro d'utilisateur à supprimer : 
+            
+            <input name="numero" />
+            <input type="submit" value="Supprimer" />
+            </p>
+            </form>
+            <?php
+        }
+        
+        else
+        {
+            
+            try
+            {
+                $bdd = new PDO('mysql:host=localhost;dbname=mydb;charset=utf8', 'root', '');
+            }
+            catch(Exception $e)
+            {
+                die('Erreur : '.$e->getMessage());
+            }
          
-$req="DELETE FROM users WHERE identifiant =  :identifiant";
-$stmt = $pdo->prepare($sql);
-$stmt->bindParam(':identifiant', $_GET['supprimer'], PDO::PARAM_INT);  
-$stmt->execute();
-}
+            $reponse = $bdd->query('SELECT * FROM personne WHERE N°Inscription ='.$_POST['numero'].' ');
+            $request = $bdd->query('DELETE * FROM personne WHERE  N°Inscription ='.$_POST['numero'].'');
+            while ($donnees = $reponse->fetch())
+            {
+                $resultat = $bdd->query($request);
+                //$bdd->query($request);
+                if ($resultat == FALSE) { 
+                    $Color = "white";
+                    echo '<center>'.'<div style="Color:'.$Color.'">'.'Echec de la requête.<br />'; 
+                } 
+                else { 
+                    $Color = "white";
+                    echo '<center>'.'<div style="Color:'.$Color.'">'.$donnees['nom'].' '.$donnees['nom'].' a bien été supprimé'.'</div>';
+                }
+                
+                 
+            }
+            $reponse->closeCursor(); 
 
-?>
+        }
+
+        ?>
+        
+    </body>
+</html>
