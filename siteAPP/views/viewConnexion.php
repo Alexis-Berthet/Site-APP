@@ -21,9 +21,9 @@
                    minlength="8" required>
         </label>
         <br/> <br/>
-        <input type="submit" value="se_connecter">
+        <input type="submit" value="Se connecter">
 
-        <p id="mdp_oublie"><a href="mot_de_passe_oublié.html">Mot de passe oublié</a></p>
+        <p id="mdp_oublie"><a href="index.php?action=see_mot_de_passe_oublie">Mot de passe oublié</a></p>
 
         <br/> <br/>
 </div>
