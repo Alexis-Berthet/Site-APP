@@ -1,0 +1,71 @@
+
+.logo1{
+    position: absolute;
+    top:200px;
+    height: 20%;
+}
+
+.logo2{
+    position: absolute;
+    height:20%;
+    top:215px;
+    right: 5px;
+
+}
+header h2 a { 
+    text-align:left;
+    font-size: 31px;
+    font-family: Georgia;
+    float: left;
+    text-decoration: none;
+    color: black;
+    
+}
+#Accueil{
+    float:left;
+    margin: 0px 10px 0px 0px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    text-decoration: underline;
+}
+#Forum {
+    float:left;
+    margin: 0px 10px 0px 0px;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+#Contact{
+    float:left;
+    margin: 0px 10px 0px 0px;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+#Connexion{
+    float:left;
+    margin: 0px 10px 0px 0px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+a:hover{color:rgb(203, 228, 248)}
+connexion:hover{color: rgb()}
+
+#arriere-plan {
+    height: 400px;
+    background-image: url("https://zupimages.net/up/19/51/m5oe.jpg");
+    background-size: cover;
+    background-attachment: fixed ;
+    border: 0px;
+    margin:-20px;
+    padding:0px;
+}
+
+.vertical-menu {
+    width: 600px; 
+  }
+  
+  .vertical-menu h2 {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
