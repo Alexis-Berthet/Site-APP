@@ -1,0 +1,39 @@
+
+
+body{
+    background-color: rgb(54, 147, 214);
+}
+
+h3{
+    text-align: center;
+    font-family: sylfaen;
+    color: white;
+    font-size: 1.5em;
+}
+
+
+
+form {
+    color : white;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+label{
+	font-size: 1.4em ;
+	align-content:center;
+	text-align: center;
+}
+.lien{
+	color : white;
+    text-decoration: underline;
+}
+
+.output {
+    background: center/cover no-repeat url('/media/examples/hamster.jpg');
+    position: relative;
+}
+
+
